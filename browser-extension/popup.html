@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Listing Doctor</title>
+  <style>
+    :root { color-scheme: light; font-family: "Segoe UI", Arial, sans-serif; color: #292326; background: #fff; }
+    * { box-sizing: border-box; }
+    body { width: 310px; margin: 0; padding: 16px; }
+    header { display: flex; align-items: center; gap: 10px; }
+    header img { width: 38px; height: 38px; border-radius: 9px; }
+    h1 { margin: 0; font-size: 15px; }
+    header p { margin: 3px 0 0; color: #7d7478; font-size: 10px; }
+    .hint { margin: 14px 0 11px; color: #766b70; font-size: 11px; line-height: 1.5; }
+    button { width: 100%; padding: 10px; border: 0; border-radius: 7px; background: #d7193f; color: white; font: inherit; font-size: 11px; font-weight: 650; cursor: pointer; }
+    button:hover { background: #b91536; }
+    .secondary { margin-top: 7px; border: 1px solid #eee7e9; background: white; color: #54484d; }
+    .secondary:hover { background: #fff0f2; color: #b91536; }
+    .status { min-height: 15px; margin: 9px 0 0; color: #8a414d; font-size: 10px; line-height: 1.4; }
+    .privacy { margin: 10px 0 0; color: #92878b; font-size: 9px; line-height: 1.45; }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="assets/ld-icon-128.png" alt="">
+    <div><h1>Listing Doctor</h1><p>Your property-listing copilot</p></div>
+  </header>
+  <p class="hint">Select listing text on a page, then use the button below or right-click the selection.</p>
+  <button id="analyzeSelection" type="button">Review selected text</button>
+  <button id="openApp" class="secondary" type="button">Open Listing Doctor</button>
+  <button id="openSettings" class="secondary" type="button">Set app URL</button>
+  <p id="status" class="status" role="status" aria-live="polite"></p>
+  <p class="privacy">Only the text you select is passed to the app. It is not sent until you choose Analyze there.</p>
+  <script src="popup.js"></script>
+</body>
+</html>

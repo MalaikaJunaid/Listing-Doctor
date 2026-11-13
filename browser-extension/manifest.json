@@ -1,0 +1,29 @@
+{
+  "manifest_version": 3,
+  "name": "Listing Doctor",
+  "version": "1.0.0",
+  "description": "Send selected property-listing text to Listing Doctor for review.",
+  "permissions": [
+    "activeTab",
+    "contextMenus",
+    "scripting",
+    "storage"
+  ],
+  "background": {
+    "service_worker": "service-worker.js"
+  },
+  "action": {
+    "default_title": "Open Listing Doctor",
+    "default_popup": "popup.html",
+    "default_icon": {
+      "128": "assets/ld-icon-128.png"
+    }
+  },
+  "icons": {
+    "128": "assets/ld-icon-128.png"
+  },
+  "options_ui": {
+    "page": "options.html",
+    "open_in_tab": true
+  }
+}
